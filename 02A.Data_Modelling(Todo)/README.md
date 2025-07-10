@@ -1,4 +1,15 @@
 # Data modelling for a todo app.
+### NOTE
+
+* This tells Mongoose that the ObjectId stored in createdBy refers to a document in the User collection.
+* It sets up a relationship (like a foreign key in SQL) to the User model.
+
+```javascript
+  createdBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User"
+  }
+```
 
 # user model
 ```javascript
